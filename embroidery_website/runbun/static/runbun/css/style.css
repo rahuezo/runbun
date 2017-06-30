@@ -1,0 +1,55 @@
+/*
+COLOR SCHEME
+
+BLACK: #000
+INK: #062F4F
+POSY: #813772
+EMBERS: #B82601
+LIGHT PURPLE: #BBA3D0
+
+*/
+
+
+
+.navbar-brand, .navbar-nav li a {
+    line-height: 55px;
+    height: 55px;
+    padding-top: 0;
+}
+
+.navbar-inverse .navbar-brand {
+    font-size: 32px;
+    color: white; 
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: #BBA3D0; 
+}
+
+.navbar.navbar-inverse {
+    padding: 0px 10% 0px 10%;
+    background-color: #000000; 
+}
+
+#runbun-logo {
+    height: 50px;
+    display: inline-block; 
+}
+
+ul.nav a {
+    color: #FFF !important;
+    font-size: 16px;
+    text-transform: uppercase; 
+}
+
+ul.nav a:hover {
+    color: #FFF !important;
+}
+
+ul.nav li:hover {
+    background-color: #BBA3D0;
+}
+
+ul.nav li .current {
+    background-color: #BBA3D0;
+}
