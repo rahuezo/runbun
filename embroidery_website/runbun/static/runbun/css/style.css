@@ -3,13 +3,24 @@ COLOR SCHEME
 
 BLACK: #000
 INK: #062F4F
+LIGHT-INK: #094777
 POSY: #813772
 EMBERS: #B82601
+LIGHT-EMBERS: #E42F01
 LIGHT PURPLE: #BBA3D0
 
 */
 
+html, body {
+  font-size: 20px;
+  /*padding-top: 60px;*/
+}
 
+.navbar.navbar-inverse {
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 
 .navbar-brand, .navbar-nav li a {
     line-height: 55px;
@@ -18,32 +29,34 @@ LIGHT PURPLE: #BBA3D0
 }
 
 .navbar-inverse .navbar-brand {
-    font-size: 32px;
-    color: white; 
+    font-size: 1.8rem;
+    color: white;
 }
 
 .navbar-inverse .navbar-brand:hover {
-    color: #BBA3D0; 
+    color: #BBA3D0;
 }
 
 .navbar.navbar-inverse {
     padding: 0px 10% 0px 10%;
-    background-color: #000000; 
+    background-color: #000000;
 }
 
 #runbun-logo {
     height: 50px;
-    display: inline-block; 
+    display: inline-block;
 }
 
 ul.nav a {
     color: #FFF !important;
-    font-size: 16px;
-    text-transform: uppercase; 
+    font-size: 0.6rem;
+    text-transform: uppercase;
 }
 
 ul.nav a:hover {
     color: #FFF !important;
+    font-size: 0.7rem;
+    transition: font-size ease-in 0.1s;
 }
 
 ul.nav li:hover {
@@ -52,4 +65,125 @@ ul.nav li:hover {
 
 ul.nav li .current {
     background-color: #BBA3D0;
+}
+
+ul.nav a.signin {
+  background-color: #B82601;
+}
+
+ul.nav a.signin:hover {
+  background-color: #E42F01;
+}
+
+ul.nav a.shopping-cart {
+  background-color: #062F4F;
+}
+
+ul.nav a.shopping-cart:hover {
+  background-color: #094777;
+}
+
+.back-to-top-btn {
+  position: fixed;
+  bottom: 10px;
+  left: calc(50% - 50px);
+  /*background: rgba(50,50,50,0.5);
+  border: 1px solid rgba(50,50,50,0.3);;*/
+  color: #333;
+  font-size: 1.5em;
+  line-height: 40px;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+}
+
+.back-to-top-btn:hover {
+  color: #555;
+  cursor: pointer;
+  transition: color ease-in 0.1s; 
+
+}
+
+/*MEDIA QUERIES*/
+
+@media (min-width:320px)  {
+/* smartphones, iPhone, portrait 480x320 phones */
+  ul.nav a {
+      font-size: 0.5rem;
+  }
+}
+
+@media (min-width:481px)  {
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  ul.nav a {
+      font-size: 0.55rem;
+  }
+}
+
+@media (min-width:641px)  {
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  ul.nav a {
+      font-size: 0.6rem;
+  }
+}
+
+@media (min-width:961px)  {
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+  ul.nav a {
+      font-size: 0.65rem;
+  }
+}
+
+@media (min-width:1025px) {
+/* big landscape tablets, laptops, and desktops */
+  ul.nav a {
+      font-size: 0.7rem;
+  }
+}
+
+
+@media (min-width:1281px) {
+/* hi-res laptops and desktops */
+
+  ul.nav a {
+      font-size: 0.75rem;
+  }
+}
+
+
+@media (max-width: 991px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
 }
