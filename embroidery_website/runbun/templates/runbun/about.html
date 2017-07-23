@@ -13,39 +13,48 @@
 
 <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-       <div class="container-fluid">
-         <!-- Brand and toggle get grouped for better mobile display -->
-         <div class="navbar-header">
-           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-             <span class="sr-only">Toggle navigation</span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-           </button>
-           <a class="navbar-brand" href="{% url 'runbun:index' %}">
-			<img src="{% static 'runbun/img/runBun_logo.gif' %}" alt="Home" id="runbun-logo">
-			run<strong>Bun</strong>
-		   </a>
-         </div>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-         <!-- Collect the nav links, forms, and other content for toggling -->
-         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <a class="navbar-brand" href="{% url 'runbun:index' %}">
+          <img src="{% static 'runbun/img/runBun_logo.gif' %}" alt="Home" id="runbun-logo">run<strong>Bun</strong>
+        </a>
+      </div>
 
-           <ul class="nav navbar-nav navbar-right text-center">
-             <li><a href="{% url 'runbun:index' %}" class="nav-link">Home</a></li>
-             <li><a href="{% url 'runbun:gallery' %}" class="nav-link">Gallery</a></li>
-             <li><a href="{% url 'runbun:reviews' %}" class="nav-link">Reviews</a></li>
-             <li><a href="{% url 'runbun:contact' %}" class="nav-link">Contact Us</a></li>
-             <li><a href="{% url 'runbun:about' %}" class="nav-link current">About Us</a></li>
-             <li><a href="{% url 'runbun:signin' %}" class="nav-link signin" id="signin-btn">Sign In</a></li>
-             <li><a href="{% url 'runbun:cart' %}" class="nav-link shopping-cart" id="shopping-cart-btn"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
-           </ul>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
+        <ul class="nav navbar-nav navbar-left text-center">
+          <li><a href="#shirts" class="nav-link current">Shirts</a></li>
+          <li><a href="#jackets" class="nav-link">Jackets</a></li>
+          <li><a href="#hats" class="nav-link">Hats</a></li>
+          <li><a href="#backpacks" class="nav-link">Backpacks</a></li>
+          <li><a href="#custom-items" class="nav-link">Custom Items</a></li>
+        </ul>
 
-         </div><!-- /.navbar-collapse -->
-       </div><!-- /.container-fluid -->
-    </nav>
+        <ul class="nav navbar-nav navbar-right text-center">
+          <li><a href="#contact-us" class="nav-link">Contact Us</a></li>
+          <li><a href="{% url 'runbun:about' %}" class="nav-link">About Us</a></li>
+          <li><a href="{% url 'runbun:signin' %}" class="nav-link signin" id="signin-btn"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Sign In</a></li>
+          <li>
+            <a href="{% url 'runbun:cart' %}" class="nav-link shopping-cart" id="shopping-cart-btn">
+              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+              <span class="badge badge-info">4</span>
+            </a>
+          </li>
+        </ul>
+
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 
 
     <div class="container">

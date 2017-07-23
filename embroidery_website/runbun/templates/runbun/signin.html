@@ -13,48 +13,129 @@
 
 <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-       <div class="container-fluid">
-         <!-- Brand and toggle get grouped for better mobile display -->
-         <div class="navbar-header">
-           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-             <span class="sr-only">Toggle navigation</span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-           </button>
-           <a class="navbar-brand" href="{% url 'runbun:index' %}">
-			<img src="{% static 'runbun/img/runBun_logo.gif' %}" alt="Home" id="runbun-logo">
-			run<strong>Bun</strong>
-		   </a>
-         </div>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-         <!-- Collect the nav links, forms, and other content for toggling -->
-         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <a class="navbar-brand" href="{% url 'runbun:index' %}">
+          <img src="{% static 'runbun/img/runBun_logo.gif' %}" alt="Home" id="runbun-logo">run<strong>Bun</strong>
+        </a>
+      </div>
 
-           <ul class="nav navbar-nav navbar-right text-center">
-             <li><a href="{% url 'runbun:index' %}" class="nav-link">Home</a></li>
-             <li><a href="{% url 'runbun:gallery' %}" class="nav-link">Gallery</a></li>
-             <li><a href="{% url 'runbun:reviews' %}" class="nav-link">Reviews</a></li>
-             <li><a href="{% url 'runbun:contact' %}" class="nav-link">Contact Us</a></li>
-             <li><a href="{% url 'runbun:about' %}" class="nav-link">About Us</a></li>
-             <li><a href="{% url 'runbun:signin' %}" class="nav-link signin" id="signin-btn">Sign In</a></li>
-             <li><a href="{% url 'runbun:cart' %}" class="nav-link shopping-cart" id="shopping-cart-btn"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
-           </ul>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
+        <ul class="nav navbar-nav navbar-left text-center">
+          <li><a href="#shirts" class="nav-link current">Shirts</a></li>
+          <li><a href="#jackets" class="nav-link">Jackets</a></li>
+          <li><a href="#hats" class="nav-link">Hats</a></li>
+          <li><a href="#backpacks" class="nav-link">Backpacks</a></li>
+          <li><a href="#custom-items" class="nav-link">Custom Items</a></li>
+        </ul>
 
-         </div><!-- /.navbar-collapse -->
-       </div><!-- /.container-fluid -->
-    </nav>
+        <ul class="nav navbar-nav navbar-right text-center">
+          <li><a href="#contact-us" class="nav-link">Contact Us</a></li>
+          <li><a href="{% url 'runbun:about' %}" class="nav-link">About Us</a></li>
+          <li id="signin-page-btn"><a href="{% url 'runbun:signin' %}" class="nav-link signin" id="signin-btn"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Sign In</a></li>
+          <li id="signup-page-btn"><a href="#sign-up" class="nav-link signup-btn" id="signup-btn"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Sign Up</a></li>
+          <li>
+            <a href="{% url 'runbun:cart' %}" class="nav-link shopping-cart" id="shopping-cart-btn">
+              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+              <span class="badge badge-info">4</span>
+            </a>
+          </li>
+        </ul>
 
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 
+  {% comment %}
     <div class="container">
       <div class="jumbotron">
         <h1>This is Sign In</h1>
         <p>...</p>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
       </div>
-	</div> <!--container-->
+	</div>
+  {% endcomment %}
+
+  <div class="container signin-form">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-3">
+        <h1 class="text-center" id="signin-title">Sign In</h1>
+        <br>
+        <form>
+          <div class="form-group">
+            {# <label for="exampleInputEmail1" class="text-muted">Enter your email *</label>#}
+            <input type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="Email">
+          </div>
+          <div class="form-group">
+            {# <label for="exampleInputPassword1" class="text-muted">Enter your password *</label>#}
+            <input type="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Password">
+          </div>
+
+          <button type="submit" class="input-lg" id="signin-form-btn">Sign In</button>
+
+
+        </form>
+      </div>
+    </div><br>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-3">
+        <p class="text-muted text-center">Don't have an account? <a class="text-info signup-link">Register</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container signup-form">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-3">
+        <h1 class="text-center" id="signin-title">Sign Up</h1>
+        <br>
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control input-lg" id="exampleInputEmail1" placeholder="First Name">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control input-lg" id="exampleInputPassword1" placeholder="Last Name">
+          </div>
+
+          <div class="form-group">
+            <input type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="Confirm Email">
+          </div>
+
+          <div class="form-group">
+            <input type="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Confirm Password">
+          </div>
+
+          <button type="submit" class="input-lg" id="signin-form-btn">Sign Up</button>
+
+
+        </form>
+      </div>
+    </div><br>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-3">
+        <p class="text-muted text-center">Already have an account? <a class="text-info signin-link">Sign In</a></p>
+      </div>
+    </div>
+  </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -63,6 +144,24 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <script src="{% static 'runbun/js/main.js' %}"></script>
+
+  <script type="text/javascript">
+    $('.signin-form').slideDown();
+    // signin-page-btn
+    $('.signup-link, #signup-btn').click(function(){
+      $('.signin-form').slideUp();
+      $('.signup-form').slideDown();
+      $('#signin-page-btn').show();
+      $('#signup-page-btn').hide();
+    });
+
+    $('.signin-link, #signin-btn').click(function(){
+      $('.signup-form').slideUp();
+      $('.signin-form').slideDown();
+      $('#signin-page-btn').hide();
+      $('#signup-page-btn').show();
+    });
+  </script>
 
 </body>
 </html>

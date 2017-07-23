@@ -13,7 +13,7 @@ LIGHT PURPLE: #BBA3D0
 
 html, body {
   font-size: 20px;
-  /*padding-top: 60px;*/
+  padding-top: 60px;
 }
 
 .navbar.navbar-inverse {
@@ -47,16 +47,25 @@ html, body {
     display: inline-block;
 }
 
+#runbun-logo-signin {
+    height: 60px;
+    display: inline-block;
+}
+
+.badge-info {
+  background-color: #3a87ad;
+}
+
 ul.nav a {
     color: #FFF !important;
     font-size: 0.6rem;
     text-transform: uppercase;
+    transition: all ease-in 0.1s;
 }
 
 ul.nav a:hover {
     color: #FFF !important;
     font-size: 0.7rem;
-    transition: font-size ease-in 0.1s;
 }
 
 ul.nav li:hover {
@@ -64,7 +73,9 @@ ul.nav li:hover {
 }
 
 ul.nav li .current {
-    background-color: #BBA3D0;
+    /*background-color: #BBA3D0;*/
+
+
 }
 
 ul.nav a.signin {
@@ -75,6 +86,14 @@ ul.nav a.signin:hover {
   background-color: #E42F01;
 }
 
+ul.nav a#signup-btn {
+  background-color: #498467;
+}
+
+ul.nav a#signup-btn:hover {
+  background-color: #52B788;
+}
+
 ul.nav a.shopping-cart {
   background-color: #062F4F;
 }
@@ -83,12 +102,10 @@ ul.nav a.shopping-cart:hover {
   background-color: #094777;
 }
 
-.back-to-top-btn {
+#back-to-top-btn {
   position: fixed;
   bottom: 10px;
   left: calc(50% - 50px);
-  /*background: rgba(50,50,50,0.5);
-  border: 1px solid rgba(50,50,50,0.3);;*/
   color: #333;
   font-size: 1.5em;
   line-height: 40px;
@@ -97,11 +114,68 @@ ul.nav a.shopping-cart:hover {
   text-align: center;
 }
 
-.back-to-top-btn:hover {
+#back-to-top-btn:hover {
   color: #555;
   cursor: pointer;
-  transition: color ease-in 0.1s; 
+  transition: color ease-in 0.1s;
 
+}
+
+.navbar-header .navbar-toggle:hover {
+  background: #BBA3D0;
+}
+
+.register-why {
+  font-size: 0.7rem;
+}
+
+.form-control{
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+#signin-title {
+  color: #6D5E8E;
+}
+
+/*'box-shadow', '0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 255, 0, 0.6)'*/
+
+
+.signin-form, .signup-form {
+  display: none;
+}
+
+.signin-form {
+  padding-top: 8%;
+}
+
+.signin-form input {
+  color: #8975B2;
+  /*border-color: #BBA3D0;*/
+  /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(187, 163, 208, 0.6);*/
+}
+
+.signup-link, .signin-link {
+  cursor: pointer;
+}
+
+#signin-page-btn {
+  display: none;
+}
+
+#signin-form-btn {
+  color: #FFF;
+  text-transform: uppercase;
+  border-style: none;
+  border-radius: 0;
+  background: #6D5E8E;
+  transition: all ease-in 0.1s;
+  width: 100%;
+}
+
+#signin-form-btn:hover {
+  background: #8975B2;
 }
 
 /*MEDIA QUERIES*/
@@ -111,12 +185,25 @@ ul.nav a.shopping-cart:hover {
   ul.nav a {
       font-size: 0.5rem;
   }
+  ul.nav a:hover {
+      font-size: 0.55rem;
+  }
+  .navbar-inverse .navbar-brand {
+      font-size: 1.55rem;
+  }
 }
 
 @media (min-width:481px)  {
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
   ul.nav a {
       font-size: 0.55rem;
+  }
+  ul.nav a:hover {
+      font-size: 0.6rem;
+  }
+
+  .navbar-inverse .navbar-brand {
+      font-size: 1.6rem;
   }
 }
 
@@ -125,6 +212,13 @@ ul.nav a.shopping-cart:hover {
   ul.nav a {
       font-size: 0.6rem;
   }
+  ul.nav a:hover {
+      font-size: 0.65rem;
+  }
+
+  .navbar-inverse .navbar-brand {
+      font-size: 1.65rem;
+  }
 }
 
 @media (min-width:961px)  {
@@ -132,12 +226,29 @@ ul.nav a.shopping-cart:hover {
   ul.nav a {
       font-size: 0.65rem;
   }
+
+  ul.nav a:hover {
+      font-size: 0.7rem;
+  }
+
+  .navbar-inverse .navbar-brand {
+      font-size: 1.7rem;
+  }
 }
 
 @media (min-width:1025px) {
 /* big landscape tablets, laptops, and desktops */
+
   ul.nav a {
       font-size: 0.7rem;
+  }
+
+  ul.nav a:hover {
+      font-size: 0.75rem;
+  }
+
+  .navbar-inverse .navbar-brand {
+      font-size: 1.75rem;
   }
 }
 
@@ -148,10 +259,18 @@ ul.nav a.shopping-cart:hover {
   ul.nav a {
       font-size: 0.75rem;
   }
+
+  ul.nav a:hover {
+      font-size: 0.8rem;
+  }
+
+  .navbar-inverse .navbar-brand {
+      font-size: 1.8rem;
+  }
 }
 
 
-@media (max-width: 991px) {
+@media (max-width: 1550px) {
   .navbar-header {
       float: none;
   }

@@ -49,3 +49,7 @@ ul.nav a:hover {
 ul.nav li:hover {
     background-color: #BBA3D0;
 }
+
+ul.nav li .current {
+    background-color: #BBA3D0;
+}
